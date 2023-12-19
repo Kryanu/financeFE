@@ -2,7 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root{
-    background-color: #1a1a1a;
+    background-color: #EAD7B8;
+} */
+
+body{
+    min-height: 100vh;
+}
+
+html {
+    min-height: 100vh;
 }
