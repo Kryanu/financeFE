@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { CompanyScore, CompanyConsole } from "../components/pages";
+import { CompanyScore, CompanyOverview } from "../components/pages";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: CompanyConsole,
+      component: CompanyOverview,
     },
     {
       path: "/companyScore/:ticker",
