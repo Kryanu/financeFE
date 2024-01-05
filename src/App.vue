@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen h-full">
+  <div class="h-full">
     <RouterView />
   </div>
   
