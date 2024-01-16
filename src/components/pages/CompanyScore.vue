@@ -1,5 +1,5 @@
 <template>
-  <PageTemplate title="Company Score" :filters="SCORE_FILTERS">
+  <PageTemplate title="Company Score" :filters="SCORE_FILTERS" :isShowBack="true">
     <template v-slot:content>
       <div v-if="!!companyScore" class=" p-4 rounded-md">
         <Badge

@@ -5,3 +5,7 @@ export const OVERVIEW_FILTERS = [
 export const SCORE_FILTERS = [
     'Balance Sheet', 'Cash Flow', 'Income Statement', 'Price'
 ]
+
+export const CONSOLE_LIST = [
+    'Ticker List'
+]

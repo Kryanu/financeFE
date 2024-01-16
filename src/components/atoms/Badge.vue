@@ -2,7 +2,7 @@
   <div
     :class="['p-2 rounded-md drop-shadow-md flex justify-center', classes]"
   >
-    <h1 class="underline">{{ mappedText }}</h1>
+    <p>{{ mappedText }}</p>
   </div>
 </template>
 

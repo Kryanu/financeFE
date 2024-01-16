@@ -31,4 +31,7 @@ export const API = {
     );
     return res.data;
   },
+  getCompanyStatements: async (companyName) => {
+    return await axios.get(`http://localhost:3000/company/statements?ticker=${companyName}`);
+  }
 };
