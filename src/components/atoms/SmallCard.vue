@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-4 text-center space-y-2 border-sea-blue justify-center">
+  <div class="flex flex-col p-4 text-center space-y-2 border-sea-blue justify-center text-shadow-md">
     <p class="drop-shadow-2xl">{{ ticker }}</p>
     <p>{{ score }}</p>
     <button

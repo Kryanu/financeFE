@@ -7,11 +7,9 @@
     </div>
     <div class="flex grow min-h-full">
       <div class="flex basis-1/4 flex-col bg-sea-blue space-y-2 pt-2" >
-        <FilterItem v-for="filter in filters" :text="filter" />
+        <FilterItem v-for="(filter, index) in filters" :text="filter" :isSelected="isSelected === index" @click="selectFilter(index)"/>
       </div>
-      <!-- Create Slot here to pass Overview Pane or ListItems -->
       <div class="basis-3/4 bg-pastel-orange">
-        <!-- <OverviewPane /> -->
         <slot name="content"></slot>
       </div>
     </div>
@@ -35,6 +33,16 @@ export default {
       filters: {
         type: Array,
         default: OVERVIEW_FILTERS
+      }
+    },
+    data(){
+      return {
+        isSelected: undefined
+      }
+    },
+    methods: {
+      selectFilter(index){
+        this.isSelected = index;
       }
     }
     
