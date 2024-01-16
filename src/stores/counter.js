@@ -20,5 +20,8 @@ export const useApiStore = defineStore('apiStore', {
     async retrieveCompanyCloseOverHigh(ticker) {
       return await API.getCloseOverHigh(ticker);
     },
+    async retrieveCompanyStatements(ticker){
+      return await API.getCompanyStatements(ticker);
+    }
   },
 });

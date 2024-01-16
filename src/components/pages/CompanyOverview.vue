@@ -1,5 +1,5 @@
 <template>
-    <PageTemplate title="Companies Overview">
+    <PageTemplate title="Companies Overview" :isShowBack="true">
         <template v-slot:content>
             <OverviewPane />
         </template>
