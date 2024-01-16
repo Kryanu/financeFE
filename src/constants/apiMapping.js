@@ -8,5 +8,7 @@ export const mapping = {
     netProfit: "Net Profit Test",
     balanceSheetTests: "Balance Sheet Tests",
     cashFlowTests: "Cash Flow Tests",
-    incomeStatementTests: "Income Statement Tests"
+    incomeStatementTests: "Income Statement Tests",
+    priceTests: "Price Tests",
+    ath: "All Time High Distance (%)"
 }

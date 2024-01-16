@@ -2,12 +2,12 @@
   <div
     v-for="(item, index) in arrayData"
     :key="index"
-    class="flex mr-auto bg-gray-600 p-4 m-2 rounded-md text-white drop-shadow-md"
+    class="flex mr-auto bg-ocean-blue p-4 m-2 rounded-md text-white drop-shadow-md"
   >
-    <div class="flex justify-between w-full">
-      <p>{{ apiMapping[`${item}`] }}</p>
-      <p :class="[isPassClass(objectData[item].success)]">
-        {{ formatValue(objectData[`${item}`].value) }}
+    <div class="flex justify-between w-full text-xl">
+      <p class="text-cloud-white">{{ apiMapping[`${item}`] }}</p>
+      <p :class="isPassClass(objectData[item].success)">
+        {{ formatValue(objectData[`${item}`]?.value) }}
       </p>
     </div>
   </div>
@@ -31,18 +31,20 @@ export default {
       return Math.round(number * 100) / 100;
     },
     formatValue(input) {
-      if (input) {
-      }
-      if (this.isNumber(input)) {
-        return this.formatNumber(input);
-      } else if (input === true || input === false) {
-        return `${capitalize(input)}`;
-      } else {
-        if (input?.consistency === true) {
-          return 'Passed';
+      if (input !== undefined) {
+        if (this.isNumber(input)) {
+          return this.formatNumber(input);
+        } else if (input === true || input === false) {
+          return `${capitalize(input)}`;
         } else {
-          return `Failed By ${5 - input.years} Years`;
+          if (input?.consistency === true) {
+            return 'Passed';
+          } else {
+            return `Failed By ${5 - input.years} Years`;
+          }
         }
+      } else {
+        return 'NaN'
       }
     },
     isNumber(value) {
