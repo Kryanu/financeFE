@@ -1,6 +1,6 @@
 # jsfe
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 3 in Rsbuild.
 
 ## Recommended IDE Setup
 
@@ -8,7 +8,7 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+See [Rsbuild Configuration Reference](https://rsbuild.dev/config/).
 
 ## Project Setup
 
@@ -28,8 +28,25 @@ npm run dev
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## API Modes
+
+This app supports both live and mock API modes through environment variables.
+
+1. Copy `.env.example` to `.env.local`.
+2. Set `VITE_API_MODE`:
 
 ```sh
-npm run test:unit
+VITE_API_MODE=mock
 ```
+
+Use `mock` for local development without a backend, or `live` to call the real API.
+
+`.env.local` is ignored by git, so it stays machine-specific.
+
+Optional:
+
+```sh
+VITE_API_BASE_URL=http://localhost:3000
+```
+
+`VITE_API_BASE_URL` is used only in `live` mode.

@@ -19,11 +19,9 @@
 <script>
 import { FilterItem } from '../atoms';
 import { OVERVIEW_FILTERS } from '../../constants'
-import OverviewPane from '../molecules/OverviewPane.vue';
 export default {
     components: {
-        FilterItem,
-        OverviewPane
+    FilterItem,
     },
     props: {
       title: {
