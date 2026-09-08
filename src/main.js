@@ -1,12 +1,2 @@
-import './index.css'
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from './App.vue'
-import router from './router'
-
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+// Async boundary required by Module Federation to load shared deps first
+import('./bootstrap').then(({ mount }) => mount('#app'))
