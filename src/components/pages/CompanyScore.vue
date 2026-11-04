@@ -1,11 +1,11 @@
 <template>
   <PageTemplate title="Company Score" :filters="SCORE_FILTERS">
     <template v-slot:content>
-      <div v-if="!!companyScore" class=" p-4 rounded-md">
+      <div v-if="!!companyScore" class="p-4">
         <Badge
           :apiMapping="apiMapping"
           text="balanceSheetTests"
-          customClasses="w-fit text-xl"
+          customClasses="w-fit text-xl text-primary"
         />
         <ListItem
           :arrayData="balanceSheetTests"
@@ -15,7 +15,7 @@
         <Badge
           :apiMapping="apiMapping"
           text="cashFlowTests"
-          customClasses="w-fit text-xl"
+          customClasses="w-fit text-xl text-primary"
         />
         <ListItem
           :arrayData="cashFlowTests"
@@ -25,7 +25,7 @@
         <Badge
           :apiMapping="apiMapping"
           text="incomeStatementTests"
-          customClasses="w-fit text-xl"
+          customClasses="w-fit text-xl text-primary"
         />
         <ListItem
           :arrayData="incomeStatementTests"
@@ -34,17 +34,17 @@
         <Badge
           :apiMapping="apiMapping"
           text="priceTests"
-          customClasses="w-fit text-xl"
+          customClasses="w-fit text-xl text-primary"
         />
         <ListItem
           :arrayData="priceTests"
           :objectData="companyScore.priceTest"
         />
       </div>
-      <div class="flex text-white" v-else-if="isLoading">
+      <div class="flex text-gray-200" v-else-if="isLoading">
         <p>Data is loading...</p>
       </div>
-      <div class="flex text-white" v-else>
+      <div class="flex text-gray-200" v-else>
         <p>An Error has occurred</p>
       </div>
     </template>

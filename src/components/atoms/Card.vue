@@ -1,13 +1,13 @@
 <template>
-  <div class="p-8 rounded-md flex flex-col items-center">
-    <Badge customClasses="bg-cyan-200 p-3 text-center h-1/3 w-fit" :text="title" /> 
+  <div class="p-8 flex flex-col items-center">
+    <Badge customClasses="bg-active-secondary border border-secondary-gray text-primary p-3 text-center h-1/3 w-fit" :text="title" /> 
     <button
       @click="emitFunc"
-      class="bg-cyan-400 p-2 rounded-md m-2 drop-shadow-md h-1/3 w-full"
+      class="bg-active-secondary text-primary border border-secondary-gray hover:border-primary cursor-pointer p-2 m-2 h-1/3 w-full"
     >
       {{ text }}
     </button>
-    <Badge :text="status" customClasses="bg-white h-1/3 w-fit" />
+    <Badge :text="status" customClasses="bg-active-secondary border border-secondary-gray text-gray-200 h-1/3 w-fit" />
   </div>
 </template>
 

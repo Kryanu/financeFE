@@ -2,10 +2,10 @@
   <div
     v-for="(item, index) in arrayData"
     :key="index"
-    class="flex mr-auto bg-ocean-blue p-4 m-2 rounded-md text-white drop-shadow-md"
+    class="flex mr-auto bg-active-secondary border border-secondary-gray p-4 m-2 text-gray-200"
   >
     <div class="flex justify-between w-full text-xl">
-      <p class="text-cloud-white">{{ apiMapping[`${item}`] }}</p>
+      <p class="text-gray-200">{{ apiMapping[`${item}`] }}</p>
       <p :class="isPassClass(objectData[item].success)">
         {{ formatValue(objectData[`${item}`]?.value) }}
       </p>
@@ -51,7 +51,7 @@ export default {
       return typeof value === 'number';
     },
     isPassClass(item) {
-      return item ? 'text-green-300' : 'text-red-300';
+      return item ? 'text-primary' : 'text-red-400';
     },
   },
 };

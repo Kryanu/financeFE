@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['p-2 rounded-md drop-shadow-md flex justify-center', classes]"
+    :class="['p-2 flex justify-center', classes]"
   >
     <h1 class="underline">{{ mappedText }}</h1>
   </div>

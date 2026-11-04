@@ -1,19 +1,19 @@
 <template>
   <div class="flex flex-col p-4 items-center w-full">
     <div class="flex space-x-2">
-      <input class="rounded-md p-2" v-model="ticker" />
-      <button @click="handleRouter" class="bg-white rounded-md p-2">
+      <input class="p-2 bg-active-secondary text-gray-200 border border-secondary-gray outline-none focus:border-primary" v-model="ticker" />
+      <button @click="handleRouter" class="p-2 bg-active-secondary text-primary border border-secondary-gray hover:border-primary cursor-pointer">
         Go to Company Score
       </button>
     </div>
 
     <Badge
       v-if="!!error"
-      customClasses="w-fit px-4 bg-red-200 my-2"
+      customClasses="w-fit px-4 bg-active-secondary border border-red-400 text-red-400 my-2"
       :text="error"
     />
     <div
-      class="flex basis-full items-center justify-center mt-4 rounded-md w-1/2"
+      class="flex basis-full items-center justify-center mt-4 w-1/2"
     >
       <Card
         v-for="(item, index) in apiMethods"
@@ -29,7 +29,7 @@
         @retrieveCompanyIncomeStatement="
           retrieveAppropriateData(ticker, 'income')
         "
-        :class="['m-4','bg-slate-400', 'w-full']"
+        :class="['m-4','bg-secondary', 'border', 'border-secondary-gray', 'w-full']"
       />
     </div>
     <Card
@@ -38,7 +38,7 @@
       title="Get All Statements"
       :status="this.status"
       @retrieveAllDocuments="retrieveAppropriateData(ticker, 'all')"
-      class="bg-slate-400"
+      class="bg-secondary border border-secondary-gray"
     />
   </div>
 </template>
