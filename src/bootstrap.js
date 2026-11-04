@@ -2,7 +2,7 @@ import './index.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import router from './router'
+import createAppRouter from './router'
 
 let app = null
 
@@ -10,7 +10,7 @@ let app = null
 export const mount = (el = '#app') => {
   app = createApp(App)
   app.use(createPinia())
-  app.use(router)
+  app.use(createAppRouter())
   app.mount(el)
 }
 
